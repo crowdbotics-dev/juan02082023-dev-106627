@@ -6,6 +6,24 @@ const juandevAPI = axios.create({
 function api_docs_schema_retrieve(payload) {
   return juandevAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
 }
+function api_v1_azul_list(payload) {
+  return juandevAPI.get(`/api/v1/azul/`)
+}
+function api_v1_azul_create(payload) {
+  return juandevAPI.post(`/api/v1/azul/`, payload)
+}
+function api_v1_azul_retrieve(payload) {
+  return juandevAPI.get(`/api/v1/azul/${payload.id}/`)
+}
+function api_v1_azul_update(payload) {
+  return juandevAPI.put(`/api/v1/azul/${payload.id}/`, payload)
+}
+function api_v1_azul_partial_update(payload) {
+  return juandevAPI.patch(`/api/v1/azul/${payload.id}/`, payload)
+}
+function api_v1_azul_destroy(payload) {
+  return juandevAPI.delete(`/api/v1/azul/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return juandevAPI.post(`/api/v1/login/`, payload)
 }
@@ -83,6 +101,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_azul_list,
+  api_v1_azul_create,
+  api_v1_azul_retrieve,
+  api_v1_azul_update,
+  api_v1_azul_partial_update,
+  api_v1_azul_destroy,
   api_v1_login_create,
   api_v1_newmo_list,
   api_v1_newmo_create,
