@@ -6,3 +6,6 @@ class Newmo(models.Model):
 class Azul(models.Model):
     'Generated Model'
     armor = models.BigIntegerField()
+class NewMo45(models.Model):
+    'Generated Model'
+    sfd = models.BigIntegerField()

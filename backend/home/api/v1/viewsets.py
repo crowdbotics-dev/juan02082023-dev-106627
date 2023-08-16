@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Newmo,Azul,Azul,Newmo,Azul,Newmo
-from .serializers import NewmoSerializer,AzulSerializer,AzulSerializer,NewmoSerializer,AzulSerializer,NewmoSerializer
+from home.models import Newmo,Azul,NewMo45,Newmo,NewMo45,Newmo,NewMo45
+from .serializers import NewmoSerializer,AzulSerializer,NewMo45Serializer,NewmoSerializer,NewMo45Serializer,NewmoSerializer,NewMo45Serializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -42,3 +42,8 @@ class AzulViewSet(viewsets.ModelViewSet):
     serializer_class = AzulSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Azul.objects.all()
+
+class NewMo45ViewSet(viewsets.ModelViewSet):
+    serializer_class = NewMo45Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = NewMo45.objects.all()
