@@ -9,3 +9,6 @@ class Azul(models.Model):
 class NewMo45(models.Model):
     'Generated Model'
     sfd = models.BigIntegerField()
+class Vik(models.Model):
+    'Generated Model'
+    asa = models.BigIntegerField()

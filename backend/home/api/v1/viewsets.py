@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Newmo,Azul,NewMo45,Newmo,NewMo45,Newmo,NewMo45
-from .serializers import NewmoSerializer,AzulSerializer,NewMo45Serializer,NewmoSerializer,NewMo45Serializer,NewmoSerializer,NewMo45Serializer
+from home.models import Newmo,Azul,NewMo45,Vik,Azul,Newmo,NewMo45,Vik,Azul,Newmo,NewMo45,Vik
+from .serializers import NewmoSerializer,AzulSerializer,NewMo45Serializer,VikSerializer,AzulSerializer,NewmoSerializer,NewMo45Serializer,VikSerializer,AzulSerializer,NewmoSerializer,NewMo45Serializer,VikSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class NewMo45ViewSet(viewsets.ModelViewSet):
     serializer_class = NewMo45Serializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = NewMo45.objects.all()
+
+class VikViewSet(viewsets.ModelViewSet):
+    serializer_class = VikSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Vik.objects.all()

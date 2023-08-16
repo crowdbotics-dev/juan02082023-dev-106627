@@ -1,4 +1,4 @@
-from .models import Newmo
+from .models import Newmo, NewMo45, Azul
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 
